@@ -172,7 +172,7 @@ void execute_instruction(int16_t insn)
         {
             out = reg[SR1(insn)] + sext(imm5(insn), 4);
         }
-        setDR(DR(insn), sum);
+        setDR(DR(insn), out);
         break;
     case 0b0000:
         // BR
